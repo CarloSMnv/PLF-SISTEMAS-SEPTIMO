@@ -77,3 +77,94 @@ func sumaPares(numeros []int) int {
 }
 ```
 Cada número se evalúa en una **goroutine** independiente que corre de forma concurrente; los resultados se recolectan mediante un canal. El énfasis está en coordinar tareas que ocurren al mismo tiempo, no en el orden secuencial de ejecución.
+
+
+## 1. El primer contraste: duplicar cada elemento de una lista
+
+**Python (imperativo):**
+```python
+def duplicar(lista):
+    resultado = []
+    for x in lista:
+        resultado.append(x * 2)
+    return resultado
+
+duplicar([1, 2, 3, 4])   # [2, 4, 6, 8]
+```
+
+**Haskell (funcional):**
+```haskell
+duplicar :: [Int] -> [Int]
+duplicar = map (*2)
+
+duplicar [1,2,3,4]   -- [2,4,6,8]
+```
+
+**Racket (funcional):**
+```racket
+(define (duplicar lst)
+  (map (lambda (x) (* x 2)) lst))
+
+(duplicar '(1 2 3 4))   ; '(2 4 6 8)
+```
+
+## 2. Filtrar: quedarse solo con los pares
+
+**Python (imperativo):**
+```python
+def solo_pares(lista):
+    resultado = []
+    for x in lista:
+        if x % 2 == 0:
+            resultado.append(x)
+    return resultado
+
+solo_pares([1, 2, 3, 4, 5, 6])   # [2, 4, 6]
+```
+
+**Haskell:**
+```haskell
+soloPares :: [Int] -> [Int]
+soloPares = filter even
+
+soloPares [1,2,3,4,5,6]   -- [2,4,6]
+```
+
+**Racket:**
+```racket
+(define (solo-pares lst)
+  (filter even? lst))
+
+(solo-pares '(1 2 3 4 5 6))   ; '(2 4 6)
+```
+
+## 3. Sumar todos los elementos: acumulador vs. `fold`
+
+**Python (imperativo):**
+```python
+def suma_total(lista):
+    total = 0
+    for x in lista:
+        total = total + x
+    return total
+
+suma_total([1, 2, 3, 4])   # 10
+```
+
+**Haskell:**
+```haskell
+sumaTotal :: [Int] -> Int
+sumaTotal = foldr (+) 0
+
+sumaTotal [1,2,3,4]   -- 10
+-- (existe también la función ya hecha: sum [1,2,3,4])
+```
+
+**Racket:**
+```racket
+(define (suma-total lst)
+  (foldr + 0 lst))
+
+(suma-total '(1 2 3 4))   ; 10
+; (existe también: (apply + lst))
+```
