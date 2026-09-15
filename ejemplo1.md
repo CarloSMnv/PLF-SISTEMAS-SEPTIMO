@@ -168,3 +168,5 @@ sumaTotal [1,2,3,4]   -- 10
 (suma-total '(1 2 3 4))   ; 10
 ; (existe también: (apply + lst))
 ```
+
+Ejemplos clasicos
