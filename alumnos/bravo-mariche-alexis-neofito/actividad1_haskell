@@ -1,0 +1,17 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Windows\System32> ghci
+GHCi, version 9.10.3: https://www.haskell.org/ghc/  :? for help
+ghci> duplicar :: [Int] -> [Int]
+<interactive>:1:1: error: [GHC-88464]
+    Variable not in scope: duplicar :: [Int] -> [Int]
+
+ghci> duplicar = map (*2)
+ghci>
+ghci> duplicar [1,2,3,4]   -- [2,4,6,8]
+[2,4,6,8]
+ghci>
+ghci> duplicar [1,2,3,4]   -- [2,4,6,8]
+[2,4,6,8]
+ghci>
