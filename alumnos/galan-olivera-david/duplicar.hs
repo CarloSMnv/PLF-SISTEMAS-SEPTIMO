@@ -1,3 +1,5 @@
+main :: IO ()
+main = print (duplicar [1,2,3,4])
  duplicar :: [Int] -> [Int]
 duplicar = map (*2)
 
