@@ -1,7 +1,6 @@
 main :: IO ()
-main = do para que no sirva
+main = do 
   putStrLn "¡Hola, mundo funcional!"
   print (doble 21)
 
 doble x = x * 2
-nosirve
