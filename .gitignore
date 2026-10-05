@@ -1,0 +1,12 @@
+# Solucionario del profesor: nunca se publica, solo vive localmente.
+_solucionario/
+
+# Artefactos de compilación de Haskell
+*.hi
+*.o
+unidad-02-funcional/**/*.hi
+unidad-02-funcional/**/*.o
+
+# Artefactos de Racket
+compiled/
+unidad-02-funcional/**/compiled/
