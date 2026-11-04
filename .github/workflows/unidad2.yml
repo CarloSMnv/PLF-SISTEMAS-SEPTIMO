@@ -1,0 +1,57 @@
+name: Unidad 2 - Modelo de Programación Funcional
+
+on:
+  push:
+    paths:
+      - "unidad-02-funcional/**"
+      - ".github/workflows/unidad2.yml"
+  pull_request:
+    paths:
+      - "unidad-02-funcional/**"
+      - ".github/workflows/unidad2.yml"
+
+jobs:
+  ejemplos:
+    name: Ejemplos (deben pasar)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Racket
+        uses: Bogdanp/setup-racket@v1.15
+        with:
+          architecture: x64
+          distribution: full
+          variant: CS
+          version: stable
+
+      - name: Instalar Haskell
+        uses: haskell-actions/setup@v2.12.1
+        with:
+          ghc-version: "9.10"
+
+      - name: Correr ejemplos
+        run: bash unidad-02-funcional/scripts/correr-ejemplos.sh
+
+  ejercicios:
+    name: Ejercicios (pueden fallar mientras no se resuelvan)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Racket
+        uses: Bogdanp/setup-racket@v1.15
+        with:
+          architecture: x64
+          distribution: full
+          variant: CS
+          version: stable
+
+      - name: Instalar Haskell
+        uses: haskell-actions/setup@v2.12.1
+        with:
+          ghc-version: "9.10"
+
+      - name: Correr pruebas de ejercicios
+        run: bash unidad-02-funcional/scripts/correr-pruebas.sh
