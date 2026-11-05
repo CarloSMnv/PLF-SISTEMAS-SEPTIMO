@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradigmas de Programación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Conexiones visuales simples para desktop */
+        @media (min-width: 768px) {
+            .line-down::after {
+                content: '';
+                position: absolute;
+                bottom: -2rem;
+                left: 50%;
+                width: 2px;
+                height: 2rem;
+                background-color: #475569; /* slate-600 */
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 font-sans p-6 md:p-12">
+
+    <div class="max-w-5xl mx-auto">
+        <!-- Título Central -->
+        <header class="text-center mb-12 relative line-down">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-300 mb-2">Paradigmas de Programación</h1>
+            <p class="text-slate-400 max-w-2xl mx-auto">Modelos fundamentales que determinan la forma en que se estructura, organiza y ejecuta el código.</p>
+        </header>
+
+        <!-- Dos Grandes Familias -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 mt-16">
+            
+            <!-- Paradigma Imperativo -->
+            <div class="bg-slate-800 p-6 rounded-lg border border-slate-700 relative md:line-down shadow-lg">
+                <h2 class="text-2xl font-semibold text-blue-200 mb-3 border-b border-slate-600 pb-2">Paradigma Imperativo</h2>
+                <p class="text-slate-300 mb-4"><span class="font-bold text-slate-100">Enfoque:</span> Describe el <em>cómo</em>. Se basa en secuencias de instrucciones que cambian el estado del programa paso a paso.</p>
+                
+                <!-- Sub-paradigmas Imperativos -->
+                <div class="space-y-4 mt-6">
+                    <div class="bg-slate-700/50 p-4 rounded border border-slate-600">
+                        <h3 class="text-lg font-medium text-blue-100">Prog. Estructurada / Procedural</h3>
+                        <p class="text-sm text-slate-300 mt-2">Divide el programa en rutinas usando estructuras secuenciales e iterativas.</p>
+                        <p class="text-xs font-mono text-slate-400 mt-2">Lenguajes: C, Pascal, Fortran</p>
+                    </div>
+                    <div class="bg-slate-700/50 p-4 rounded border border-slate-600">
+                        <h3 class="text-lg font-medium text-blue-100">Prog. Orientada a Objetos (POO)</h3>
+                        <p class="text-sm text-slate-300 mt-2">Modela el problema agrupando el estado y comportamiento en "objetos".</p>
+                        <p class="text-xs font-mono text-slate-400 mt-2">Lenguajes: Java, C++, C#</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paradigma Declarativo -->
+            <div class="bg-slate-800 p-6 rounded-lg border border-blue-900 relative shadow-lg">
+                <h2 class="text-2xl font-semibold text-blue-200 mb-3 border-b border-slate-600 pb-2">Paradigma Declarativo</h2>
+                <p class="text-slate-300 mb-4"><span class="font-bold text-slate-100">Enfoque:</span> Describe el <em>qué</em>. Especifica el resultado o la lógica del problema sin detallar el control de flujo.</p>
+                
+                <!-- Sub-paradigmas Declarativos (Foco de la materia) -->
+                <div class="space-y-4 mt-6">
+                    <!-- Destacado para la materia -->
+                    <div class="bg-blue-900/30 p-4 rounded border-l-4 border-blue-400">
+                        <h3 class="text-lg font-medium text-blue-100">Programación Funcional</h3>
+                        <p class="text-sm text-slate-300 mt-2">Basada en la evaluación de funciones matemáticas puras. Evita el estado mutable y favorece la recursividad.</p>
+                        <p class="text-xs font-mono text-blue-300 mt-2">Lenguajes: Haskell, Lisp, Scheme</p>
+                    </div>
+                    <!-- Destacado para la materia -->
+                    <div class="bg-blue-900/30 p-4 rounded border-l-4 border-blue-400">
+                        <h3 class="text-lg font-medium text-blue-100">Programación Lógica</h3>
+                        <p class="text-sm text-slate-300 mt-2">El programa es una base de hechos y reglas; la ejecución es una demostración de teoremas por inferencia.</p>
+                        <p class="text-xs font-mono text-blue-300 mt-2">Lenguajes: Prolog, Datalog</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bibliografía Académica -->
+        <footer class="mt-16 bg-slate-800/50 p-6 rounded-lg border border-slate-700 text-sm text-slate-400">
+            <h4 class="text-slate-200 font-semibold mb-3">Fuentes Académicas Consultadas:</h4>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Sebesta, R. W. (2015). <em>Concepts of Programming Languages</em> (11th ed.). Pearson.</li>
+                <li>Scott, M. L. (2015). <em>Programming Language Pragmatics</em> (4th ed.). Morgan Kaufmann.</li>
+            </ul>
+        </footer>
+    </div>
+
+</body>
+</html>
