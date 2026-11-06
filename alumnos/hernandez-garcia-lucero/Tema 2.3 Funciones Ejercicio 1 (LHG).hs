@@ -1,4 +1,4 @@
- Tema 2.3: Funciones
+-- Tema 2.3: Funciones
 --
 -- Implementa sumarN, una función currificada:
 -- recibe n y regresa una función que suma n
