@@ -1,5 +1,5 @@
 
-Tema 2.3: Funciones
+--Tema 2.3: Funciones
 --
 -- Implementa componer, que recibe dos funciones f y g
 -- y regresa una función nueva que aplica primero g y luego f.
