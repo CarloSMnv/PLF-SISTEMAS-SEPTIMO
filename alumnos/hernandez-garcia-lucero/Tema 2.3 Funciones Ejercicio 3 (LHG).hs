@@ -1,4 +1,4 @@
- — Tema 2.3: Funciones
+ --Tema 2.3: Funciones
 --
 -- Implementa aplicarSiCumple, una función de orden superior
 -- que recibe un predicado, una función y un valor.
